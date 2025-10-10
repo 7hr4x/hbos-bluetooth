@@ -3,7 +3,7 @@
 ## Definitions
 ### dbus
 A message bus system providing a simple way for applications to talk to one another.
-[[Bluez]] provides dbus hooks,
+[BlueZ](./Glossary.md#BlueZ) provides dbus hooks,
 allowing applications to establish
 and manage bluetooth hardware and devices.
 
