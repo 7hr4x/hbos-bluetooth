@@ -70,6 +70,30 @@ JACK, ALSA and GStreamer-based applications.
 
 *PipeWire* uses systemd/User for management of the server and automatic socket activation.
 
+### WirePlumber
+*WirePlumber* is a powerful session and policy manager for [PipeWire](./Glossary.md#PipeWire).
+Based on a modular design, with Lua plugins,
+that implement the actual management functionality,
+it is highly configurabe and extendable.
+
+*WirePlumber* uses SPA-JSON, a superset of JSON,
+to change its behavior.
+
+The configuration files are read from
+`~/.config/wireplumber/` (user configuration),
+`/etc/wireplumber` (global configuration) 
+and then `/usr/share/wireplumber/`(stock configuration).
+
+To configure *WirePlumber* its recommended
+to add the directory `wireplumber.conf.d/` within
+`/etc/wireplumber/` or `~/.config/wireplumber/`.
+
+User configuration files have a higher priority than system files.
+Configuration files with the same name but
+in a lower priority location will be ignored.
+Within each configuration directory,
+the individual files are opened in alphanumerical order.
+
 ## Sources
 - [dbus](https://pythonhosted.org/BT-Manager/glossary.html#term-dbus)
 - [PHY](https://www.kernel.org/doc/html/latest/driver-api/phy/phy.html)
@@ -81,3 +105,6 @@ JACK, ALSA and GStreamer-based applications.
 - [sink](https://pythonhosted.org/BT-Manager/glossary.html#term-sink)
 - [HCI](https://pythonhosted.org/BT-Manager/glossary.html#term-hci)
 - [PulseAudio](https://wiki.archlinux.org/title/PulseAudio)
+- [PipeWire](https://wiki.archlinux.org/title/PipeWire)
+- [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
+- [WirePlumber](https://pipewire.pages.freedesktop.org/wireplumber/daemon/configuration/conf_file.html#the-spa-json-format)
