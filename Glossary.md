@@ -31,6 +31,7 @@ Short for *Hands-free profile*.
 The service profile used by devices that support a
 hands-free mode of operation, such as,
 a mobile phone connected to a car.
+*HFP* builds on top of [HSP](./Glossary.md#HSP).
 
 ### HSP
 Short for *Headset profile*.
@@ -52,13 +53,31 @@ such that different stack implementations can be easily plugged-in.
 It provides low-level commands for device setup, flow control, device discover,
 quality of service, physical links, authentication and encryption.
 
+### PulseAudio
+*PulseAudio* is a general purpose sound server,
+intended to run as a middleware between your applications
+and your hardware devices, either using ALSA or OSS.
+While its main purpose is to ease audio configuration,
+its modular design allows more advanced users
+to configure the daemon percisely to best suit their needs.
+
+### PipeWire
+*PipeWire* is a new low-level multimedia framework.
+It aims to offer capture and playback
+for both audio and video with minimal latency
+and support for [PulseAudio](./Glossary.md#PulseAudio),
+JACK, ALSA and GStreamer-based applications.
+
+*PipeWire* uses systemd/User for management of the server and automatic socket activation.
 
 ## Sources
 - [dbus](https://pythonhosted.org/BT-Manager/glossary.html#term-dbus)
 - [PHY](https://www.kernel.org/doc/html/latest/driver-api/phy/phy.html)
 - [BlueZ](https://www.bluez.org/about/)
 - [HFP](https://pythonhosted.org/BT-Manager/glossary.html#term-hfp)
+- [HFP](https://wiki.archlinux.org/title/Bluetooth_headset)
 - [HSP](https://pythonhosted.org/BT-Manager/glossary.html#term-hsp)
 - [source](https://pythonhosted.org/BT-Manager/glossary.html#term-source)
 - [sink](https://pythonhosted.org/BT-Manager/glossary.html#term-sink)
 - [HCI](https://pythonhosted.org/BT-Manager/glossary.html#term-hci)
+- [PulseAudio](https://wiki.archlinux.org/title/PulseAudio)
