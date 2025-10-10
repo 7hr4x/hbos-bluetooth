@@ -94,6 +94,15 @@ in a lower priority location will be ignored.
 Within each configuration directory,
 the individual files are opened in alphanumerical order.
 
+### GStreamer
+*GStreamer* is a pipeline-based multimedia framework,
+that links together a wide variety of
+media processing systems to complete complex workflows.
+For instance, 
+GStreamer can be used to build a system that reads files in one format,
+processes them, and exports them in another.
+The formats and processes can be changed in a plug and play fashion.
+
 ## Sources
 - [dbus](https://pythonhosted.org/BT-Manager/glossary.html#term-dbus)
 - [PHY](https://www.kernel.org/doc/html/latest/driver-api/phy/phy.html)
@@ -108,3 +117,4 @@ the individual files are opened in alphanumerical order.
 - [PipeWire](https://wiki.archlinux.org/title/PipeWire)
 - [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
 - [WirePlumber](https://pipewire.pages.freedesktop.org/wireplumber/daemon/configuration/conf_file.html#the-spa-json-format)
+- [GStreamer](https://en.wikipedia.org/wiki/GStreamer)
