@@ -54,7 +54,7 @@ sudo rfkill unblock all
 
 When running `rfkill list` again, the soft-block should now be gone.
 
-4. **Setup auto-login**
+5. **Setup auto-login**
 Use the *raspi-config* application to setup auto-login:
 ```bash
 sudo raspi-config
@@ -62,13 +62,13 @@ sudo raspi-config
 
 And there select `System Options>Auto Login` and select yes.
 
-5. **Install missing packages**
+6. **Install missing packages**
 ```bash
 sudo apt update
 sudo apt install pipewire pipewire-pulse pipewire-alsa wireplumber libspa-0.2-bluetooth bluez
 ```
 
-6. **Connect bluetooth device**
+7. **Connect bluetooth device**
 Since [BlueZ](./docs/Glossary.md#BlueZ) doesn't need any additional setup,
 you should be able to just connect to the pi via bluetooth.
 Your phone/tablet/computer should automatically detect it as an output source.
