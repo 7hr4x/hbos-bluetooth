@@ -55,7 +55,7 @@ sudo rfkill unblock all
 When running `rfkill list` again, the soft-block should now be gone.
 
 4. **Connect bluetooth device**
-Since [BlueZ](./Glossary.md#BlueZ) doesn't need any additional setup,
+Since [BlueZ](./docs/Glossary.md#BlueZ) doesn't need any additional setup,
 you should be able to just connect to the pi via bluetooth.
 Your phone/tablet/computer should automatically detect it as an output source.
 
