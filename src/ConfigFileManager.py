@@ -34,7 +34,7 @@ class ConfigFileManager:
             # Create parent directories if they don't exist
             os.makedirs(os.path.dirname(self.config_path), exist_ok=True)
 
-            # Now create the file
+            # Create the file
             with open(self.config_path, "w") as f:
                 f.write("[Bluetooth]\n")
                 f.write("capability=NoInputNoOutput\n")
