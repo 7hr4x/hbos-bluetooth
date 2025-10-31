@@ -48,7 +48,3 @@ class ConfigFileManager:
         self.config.read(self.config_file)
         self.capability = self.config.get("Bluetooth", "capability", fallback="KeyboardDisplay")
         self.logger.info(f"Bluetooth capability: {self.capability}")
-
-# Instantiate
-configFileManager = ConfigFileManager()
-print(configFileManager.capability)
