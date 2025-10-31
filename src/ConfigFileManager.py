@@ -38,6 +38,12 @@ class ConfigFileManager:
             with open(self.config_path, "w") as f:
                 f.write("[Bluetooth]\n")
                 f.write("capability=NoInputNoOutput\n")
+                f.write("\n")
+                f.write("discoverable=True\n")
+                f.write("discoverable_timeout=0\n")
+                f.write("\n")
+                f.write("pairable=True\n")
+                f.write("pairable_timeout=0\n")
             self.logger.info(f"Created config file: {self.config_path}")
 
         except Exception as e:
@@ -46,5 +52,17 @@ class ConfigFileManager:
     def load_config_values(self):
         self.config = configparser.ConfigParser()
         self.config.read(self.config_file)
+
         self.capability = self.config.get("Bluetooth", "capability", fallback="KeyboardDisplay")
+
+        self.discoverable = self.config.getboolean("Bluetooth", "discoverable", fallback="True")
+        self.discoverable_timeout = self.config.getint("Bluetooth", "discoverable_timeout", fallback="0")
+
+        self.pairable = self.config.getboolean("Bluetooth", "pairable", fallback="True")
+        self.pairable_timeout = self.config.getint("Bluetooth", "pairable_timeout", fallback="0")
+
         self.logger.info(f"Bluetooth capability: {self.capability}")
+        self.logger.info(f"Discoverable: {self.discoverable}")
+        self.logger.info(f"Discoverable timeout: {self.discoverable_timeout}")
+        self.logger.info(f"Pairable: {self.discoverable}")
+        self.logger.info(f"Pairable timeout: {self.discoverable_timeout}")
