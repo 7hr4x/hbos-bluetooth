@@ -29,9 +29,9 @@ For the latest guide,
 please read the installation section on the 
 [project's README](https://github.com/hifiberry/hifiberry-os/tree/hbosng?tab=readme-ov-file#installation).
 
-4. **Remove softblock from bluetooth**
+4. **Remove soft block from bluetooth**
 Sometimes the Raspberry Pi has a soft-block applied for bluetooth.
-You can see if this occured on your device by running:
+You can see if this occurred on your device by running:
 ```bash
 rfkill list
 ```
