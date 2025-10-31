@@ -8,10 +8,11 @@ from Adapter import Adapter
 
 BUS_NAME = "org.bluez"
 AGNT_MNGR_IFACE = "org.bluez.AgentManager1"
-AGENT_PATH = "/my/app/agent"
+AGENT_PATH = "/com/hifiberry/btagent"
 AGNT_MNGR_PATH = "/org/bluez"
 CAPABILITY = "NoInputNoOutput"
 DEVICE_IFACE = "org.bluez.Device1"
+
 dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
 bus = dbus.SystemBus()
 
