@@ -49,7 +49,7 @@ class Agent(dbus.service.Object):
     :raises org.bluez.Error.Rejected: If the request is rejected.
     :raises org.bluez.Error.Canceled: If the request is canceled.
 
-    :returns: The set pincode in the code, currently set to "0000".
+    :returns: The set pin code in the code, currently set to "0000".
     :rtype: str
     """
     @dbus.service.method(AGENT_IFACE, in_signature='o', out_signature='s')
@@ -59,10 +59,10 @@ class Agent(dbus.service.Object):
         return pincode
 
     """
-    This method gets called when **bluetoothd** needs to display a pincode 
+    This method gets called when **bluetoothd** needs to display a pin code 
     for an authentication.
 
-    An empty reply should be returned. When the pincode needs no longer to be
+    An empty reply should be returned. When the pin code needs no longer to be
     displayed, the `Cancel` method of the agent will be called.
 
     This is used during the pairing process of keyboards that don't support
@@ -164,7 +164,7 @@ class Agent(dbus.service.Object):
         return
 
     """
-    This method gets called to request the user to authorize an incomming pairing
+    This method gets called to request the user to authorize an incoming pairing
     attempt which would in other circumstances trigger the just-works model, or when
     the user plugged in a device that implements cable pairing. In the latter case,
     the device would not be connected to the adapter via Bluetooth yet.
