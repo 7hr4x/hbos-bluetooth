@@ -105,7 +105,7 @@ class Agent(dbus.service.Object):
     @dbus.service.method(AGENT_IFACE, in_signature="o", out_signature="u")
     def RequestPasskey(self, device):
         print("RequestPasskey (%s)" % (device))
-        set_trusted(device)
+        self.set_trusted(device)
         passkey = input("Enter passkey: ")
         return dbus.UInt32(passkey)
 
@@ -160,7 +160,7 @@ class Agent(dbus.service.Object):
     @dbus.service.method(AGENT_IFACE, in_signature="ou", out_signature="")
     def RequestConfirmation(self, device, passkey):
         print("RequestConfirmation (%s, %06d)" % (device, passkey))
-        set_trusted(device)
+        self.set_trusted(device)
         return
 
     """
